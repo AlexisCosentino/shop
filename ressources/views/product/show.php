@@ -6,7 +6,7 @@
             <img src="ressources/img/indonesie.jpg" alt="productPicture" class="img-fluid">
         </div>
         <div class="col-lg-8">
-            <p>descriptio</p>
+            <p>description</p>
             <div class="row">
                 <p class="pr-5 text-danger">prix</p>
                 <form action="index.php?action=cart" method="post">

@@ -27,7 +27,7 @@
 
     <div class="container-fluid bg-white">
         <div class="container">
-            <div class="row">
+            <div class="row pt-4">
 
                 <img src="ressources/img/logo_noir.svg" alt="logo">
 
@@ -60,7 +60,9 @@
                             </li>
                         </ul>
                     </div>
+
                 </nav>
+                <img src="ressources/img/shopping-cart.svg" alt="panier" height="50px">
             </div>
         </div>
 
