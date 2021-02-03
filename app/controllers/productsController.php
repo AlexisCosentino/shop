@@ -11,6 +11,6 @@ $resultproduct = productById($mydb, $id);
 $priceTtc = priceWithVAT($resultproduct['price_ht'],$resultproduct['vat']);
 
 if ($resultproduct == false){
-echo "L'article n'esxiste pas";
+echo "L'article n'existe pas";
 }
 require 'ressources/views/product/show.php';
