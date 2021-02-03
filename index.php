@@ -5,12 +5,12 @@ ini_set('display_errors', true);
 require_once 'config/database.php';                 //Accés Base de données
 require 'ressources/views/layouts/header.php';
 
-echo "salut ma gueule";
 
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 $routes = [
     'index' => 'app/controllers/homeController.php',
     'error' => 'ressources/views/errors/error.php',
+    'product' => 'ressources/views/product/show.php',
 ];
 
 
