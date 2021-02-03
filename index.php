@@ -2,7 +2,7 @@
 error_reporting (E_ALL);
 ini_set('display_errors', true);
 
-require_once 'config/database.php';                 //Accés Base de données
+require_once 'bootstrap/app.php'; // Appelle les différents fichiers PHP nécessaires au bon fonctionnement du site
 require 'ressources/views/layouts/header.php';
 
 
