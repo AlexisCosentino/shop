@@ -4,7 +4,7 @@ require 'ressources/views/layouts/header.php';
 
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 $routes = [
-    'index' => 'app/controllers/homeController.php',
+    'index' => 'ressources/views/home.php',
     'error' => 'ressources/views/errors/error.php',
     'product' => 'app/controllers/productsController.php',
 ];
