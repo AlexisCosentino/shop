@@ -10,9 +10,9 @@ return $result;
 
 //Fonction qui recupère tous les produits
 function getAllProducts(PDO $mydb){
-    $statement = $mydb->query ("SELECT title, description, price_ht, vat
+    $statement = $mydb->query ("SELECT title, description, price_ht, vat, id
     FROM products
     ORDER BY title");
-    $result = $statement -> fetchAll(PDO::FETCH_ASSOC);
+    $result = $statement -> fetchAll(PDO::FETCH_OBJ);
     return $result;
 }
