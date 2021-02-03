@@ -10,7 +10,7 @@ $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 $routes = [
     'index' => 'app/controllers/homeController.php',
     'error' => 'ressources/views/errors/error.php',
-    'product' => 'ressources/views/product/show.php',
+    'product' => 'app/controllers/productsController.php',
 ];
 
 
