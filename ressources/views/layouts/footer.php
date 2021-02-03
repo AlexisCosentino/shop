@@ -7,15 +7,15 @@
 
 </main>
 
-<footer class="container-fluid bg-black text-light p-3">
+<footer class="container-fluid bg-dark text-light p-3">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 mx-auto my-auto">
                 <a href="https://www.facebook.com/alexis.cosentino.5/" class="pr-4" target="_blank"><img
-                        src="image/facebook-blanc.svg" alt="facebook de alexis" width="50"></a>
+                        src="/ressources/img/facebook-blanc.svg" alt="facebook de alexis" width="50"></a>
                 <a href="https://www.instagram.com/life_focus_alexis/?hl=fr" class="pr-4" target="_blank"><img
-                        src="image/instagram_blanc.svg" alt="facebook de alexis" width="50"></a>
-                <a href="mailto:alexis27_08@hotmail.fr"><img src="image/Mail-Blanc.svg" alt="facebook de alexis"
+                        src="/ressources/img/instagram_blanc.svg" alt="facebook de alexis" width="50"></a>
+                <a href="mailto:alexis27_08@hotmail.fr"><img src="/ressources/img/Mail-Blanc.svg" alt="facebook de alexis"
                                                              width="50"></a>
             </div>
         </div>
