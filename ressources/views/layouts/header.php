@@ -47,22 +47,15 @@
                                    href="index.php?action=blogpost&id=1">Articles</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark"
-                                   href="index.php?action=blogpostcreate">Creer un article</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark"
-                                   href="index.php?action=blogpostmodify&id=1">Modifier un article</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link btn btn-lg bg-white text-dark m-1 btn-outline-dark"
-                                   href="index.php?action=blogpostdeletelist">Supprimer un article</a>
+                                <a href="index.php?action=cart"><img src="ressources/img/shopping-cart.svg" alt="panier" height="50px"></a>
                             </li>
                         </ul>
                     </div>
 
                 </nav>
-                <a href="index.php?action=cart"><img src="ressources/img/shopping-cart.svg" alt="panier" height="50px"></a>
+
+                <a type="button" class="btn btn-outline-dark" href="index.php?action=cart">Panier 1 produit XXX€ <br> Voir le panier</a>
+
             </div>
         </div>
 
