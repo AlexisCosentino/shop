@@ -29,3 +29,24 @@ function initCart(){
 function fakeCart($id,$quantity){
     $_SESSION['cart'][$id]=intval($quantity);
 }
+
+// Fonction qui retourne  le nombre de produits total du panier
+function quantitytotalCart(){
+    $quantityTotal = 0;
+    foreach ($_SESSION['cart'] as $id=>$quantity){
+        $quantityTotal += $quantity;
+    }
+        return $quantityTotal;
+}
+
+// Fonction qui retourne le prix total du panier
+function priceTotalCart(PDO $mydb, $id){
+    require 'config/database.php';
+    $priceTotal = 0;
+        $price = productById($mydb, $id);
+        $priceTotal += priceWithVAT($price['price_ht'], $price['vat']); // += : total = total + 1
+    return $priceTotal;
+}
+
+//    $product = productById($mydb, $id);
+//      $totalprice += priceWithVAT($product['price_ht'], $product['vat']);
