@@ -16,3 +16,15 @@ function getAllProducts(PDO $mydb){
     $result = $statement -> fetchAll(PDO::FETCH_OBJ);
     return $result;
 }
+
+
+//Fonction qui crée le panier
+function initCart(){
+    if(!isset($_SESSION['cart'])){
+        $_SESSION['cart']=array();
+        $_SESSION['cart']['id']=array();
+        $_SESSION['cart']['quantity']=array();
+    }
+    return true;
+}
+

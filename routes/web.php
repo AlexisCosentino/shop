@@ -7,6 +7,7 @@ $routes = [
     'index' => 'app/controllers/homeController.php',
     'error' => 'ressources/views/errors/error.php',
     'product' => 'app/controllers/productsController.php',
+    'cart' => 'app/controllers/cartController.php',
 ];
 
 
