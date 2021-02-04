@@ -22,9 +22,10 @@ function getAllProducts(PDO $mydb){
 function initCart(){
     if(!isset($_SESSION['cart'])){
         $_SESSION['cart']=array();
-        $_SESSION['cart']['id']=array();
-        $_SESSION['cart']['quantity']=array();
     }
     return true;
 }
 
+function fakeCart($id,$quantity){
+    $_SESSION['cart'][$id]=intval($quantity);
+}

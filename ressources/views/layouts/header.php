@@ -62,7 +62,7 @@
                     </div>
 
                 </nav>
-                <img src="ressources/img/shopping-cart.svg" alt="panier" height="50px">
+                <a href="index.php?action=cart"><img src="ressources/img/shopping-cart.svg" alt="panier" height="50px"></a>
             </div>
         </div>
 

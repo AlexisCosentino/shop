@@ -17,7 +17,6 @@
 
                     <label for="quantity"></label>
                     <select name="quantity" id="quantity">
-                        <option value="">Quantité</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -25,7 +24,7 @@
                         <option value="5">5</option>
                     </select>
 
-                    <input id="productid" name="poductid" type="hidden" value="<?= $resultproduct['id']?>" >
+                    <input id="productId" name="productId" type="hidden" value="<?= $resultproduct['id']?>" >
 
                     <input value="Ajouter au panier" type="submit">
                 </form>
