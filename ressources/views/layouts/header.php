@@ -53,17 +53,11 @@
                     </div>
 
                 </nav>
+                <?php if (!empty($_SESSION['cart'])): ?>
+                <a type="button" class="btn btn-outline-dark" href="index.php?action=cart">Panier <?= $result['qttotal']?> produits <?= number_format(($result['totalprice']), 2, ',', ' ') . ' €'; ?>
 
-                <a type="button" class="btn btn-outline-dark" href="index.php?action=cart">Panier 1 produit <?php if (!empty($_SESSION['cart'])) {
-
-                        $totalCart = 0;
-                        foreach ($total as $id => $totalRow):
-                            $totalCart = $totalCart + $totalRow;
-                        endforeach;
-                        echo number_format(($totalCart), 2, ',', ' ') . ' €';
-                    } else { echo "0 €";}
-                    ?>
                     <br> Voir le panier</a>
+                <?php endif; ?>
 
             </div>
         </div>

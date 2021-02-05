@@ -16,7 +16,7 @@ require 'ressources/views/layouts/header.php';
     </tr>
     </thead>
     <tbody>
-    <?php if (!empty($_SESSION)): ?>
+    <?php if (!empty($_SESSION['cart'])): ?>
         <?php foreach ($result['id'] as $id => $product): ?>
             <tr>
                 <td><img src="ressources/img/indonesie.jpg" height="100px"></td>
@@ -31,7 +31,10 @@ require 'ressources/views/layouts/header.php';
                 </td>
             </tr>
         <?php endforeach;?>
-    <?php endif; debug($total);?>
+    <?php else:?>
+    <h1>VIDE</h1>
+    <?php endif; ?>
+
     </tbody>
 </table>
 
