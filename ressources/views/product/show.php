@@ -8,7 +8,7 @@ require 'ressources/views/layouts/header.php';
     <div class="row pt-5 pb-5">
 
         <div class="col-lg-4">
-            <img src="ressources/img/indonesie.jpg" alt="productPicture" class="img-fluid">
+            <img src="ressources/img/<?=$id?>.jpg" alt="productPicture" class="img-fluid">
         </div>
 
         <div class="col-lg-8">

@@ -1,5 +1,6 @@
 <?php
 require 'app/persistences/shopData.php';
+
 // Crééer le panier
 initCart();
 
@@ -10,7 +11,8 @@ if (!empty($_POST)) {
     $priceTotalProduct = priceTotalProduct($mydb, $_POST['productId'], $_POST['quantity']); //Prix total par produit dans le panier
 };
 
-$result = getTotalCart($mydb);
+
+
 
 
 require 'ressources/views/cart/cart.php';

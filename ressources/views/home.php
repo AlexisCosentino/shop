@@ -7,8 +7,8 @@ require 'ressources/views/layouts/header.php';
     <div class="row">
         <?php if (!empty($products)): foreach ($products as $product): ?>
             <div class="col-lg-4 pb-5">
-                <a href="index.php?action=product&id=<?= $product->id ?>" class="pl-2 pr-2"><img
-                            src="ressources/img/indonesie.jpg" alt="image_produit"
+                <a href="index.php?action=product&id=<?= $product->id ?>" class="pl-2 pr-2">
+                    <img src="ressources/img/<?=$product->id?>.jpg" alt="image_produit"
                             class="img-fluid"></a>
                 <div class="row">
                     <div class="col-12">

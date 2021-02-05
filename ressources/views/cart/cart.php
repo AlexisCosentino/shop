@@ -19,7 +19,7 @@ require 'ressources/views/layouts/header.php';
     <?php if (!empty($_SESSION['cart'])): ?>
         <?php foreach ($result['id'] as $id => $product): ?>
             <tr>
-                <td><img src="ressources/img/indonesie.jpg" height="100px"></td>
+                <td><img src="ressources/img/<?=$id?>.jpg" height="100px"></td>
                 <td>
                     <?= $product['product']['title']?>
                 </td>
