@@ -4,7 +4,6 @@
 <table class="table">
     <thead>
     <tr>
-        <th scope="col">#</th>
         <th scope="col"></th>
         <th scope="col">Titre</th>
         <th scope="col">Prix Unitaire</th>
@@ -13,14 +12,25 @@
     </tr>
     </thead>
     <tbody>
+    <?php if(!empty($_SESSION)): ?>
+    <?php foreach($_SESSION['cart'] as $id => $quantity): ?>
     <tr>
-        <th scope="row">1</th>
         <td><img src="ressources/img/indonesie.jpg" height="100px"></td>
-        <td>titre du produit</td>
-        <td>10.00€</td>
-        <td>3</td>
-        <td>30.00€</td>
+        <td><?php
+            $result = productById($mydb, $id);
+            echo $result['title'];
+            ?>
+        </td>
+        <td><?php $result = productById($mydb, $id);
+            echo fancyPrice($result['price_ht'], $result['vat']);?>
+        </td>
+        <td><?= $quantity?></td>
+        <td><?php $result = productById($mydb, $id);
+            $total = priceWithVAT($result['price_ht'], $result['vat']) * $quantity;
+            echo number_format(($total), 2, ',', ' ') . ' €';?></td>
     </tr>
+    <?php endforeach;?>
+    <?php endif;?>
     </tbody>
 </table>
 

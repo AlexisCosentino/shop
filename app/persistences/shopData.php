@@ -26,7 +26,7 @@ function initCart(){
     return true;
 }
 
-function fakeCart($id,$quantity){
+function addProduct($id, $quantity){
     $_SESSION['cart'][$id]=intval($quantity);
 }
 
@@ -49,5 +49,8 @@ function priceTotalProduct(PDO $mydb, $id, $quantity){
     return $priceTotal;
 }
 
-//    $product = productById($mydb, $id);
-//      $totalprice += priceWithVAT($product['price_ht'], $product['vat']);
+//Fonction qui retourne toutes les informations du produit du panier
+function getCartProduct(PDO $mydb, int $id) {
+    productById($mydb, $id);
+
+}
