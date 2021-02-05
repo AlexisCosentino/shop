@@ -40,11 +40,12 @@ function quantitytotalCart(){
 }
 
 // Fonction qui retourne le prix total du panier
-function priceTotalCart(PDO $mydb, $id){
+function priceTotalProduct(PDO $mydb, $id, $quantity){
     require 'config/database.php';
     $priceTotal = 0;
         $price = productById($mydb, $id);
         $priceTotal += priceWithVAT($price['price_ht'], $price['vat']); // += : total = total + 1
+        $priceTotal *= $quantity;
     return $priceTotal;
 }
 
