@@ -1,5 +1,4 @@
 <?php
-require 'ressources/views/layouts/header.php';
 
 
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
@@ -24,4 +23,4 @@ if (isset($action)) {
 }
 
 
-require 'ressources/views/layouts/footer.php';
+

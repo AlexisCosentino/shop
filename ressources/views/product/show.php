@@ -1,3 +1,7 @@
+<?php
+require 'ressources/views/layouts/header.php';
+?>
+
 <div class="container">
     <h1> <?=$resultproduct['title']?></h1>
 
@@ -32,3 +36,7 @@
         </div>
     </div>
 </div>
+
+
+<?php
+require 'ressources/views/layouts/footer.php';

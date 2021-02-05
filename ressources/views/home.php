@@ -1,3 +1,7 @@
+<?php
+require 'ressources/views/layouts/header.php';
+?>
+
 <div class="container">
     <h1 class="pb-5">Nos voyages :</h1>
     <div class="row">
@@ -20,3 +24,7 @@
         <?php endif; ?>
     </div>
 </div>
+
+
+<?php
+require 'ressources/views/layouts/footer.php';

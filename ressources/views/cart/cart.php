@@ -1,3 +1,7 @@
+<?php
+require 'ressources/views/layouts/header.php';
+?>
+
 <h1>PANIER</h1>
 
 
@@ -13,21 +17,18 @@
     </thead>
     <tbody>
     <?php if (!empty($_SESSION)): ?>
-        <?php foreach ($_SESSION['cart'] as $id => $quantity): ?>
+        <?php foreach ($result['id'] as $id => $product): ?>
             <tr>
                 <td><img src="ressources/img/indonesie.jpg" height="100px"></td>
-                <td><?php
-                    $result = productById($mydb, $id);
-                    echo $result['title'];
-                    ?>
+                <td>
+                    <?= $product['product']['title']?>
                 </td>
-                <td><?php $result = productById($mydb, $id);
-                    echo fancyPrice($result['price_ht'], $result['vat']); ?>
+                <td>
+                    <?= number_format(($product['productprice']), 2, ',', ' ') . ' €'; ?>
                 </td>
-                <td><?= $quantity ?></td>
-                <td><?php $result = productById($mydb, $id);
-                    $total[$id]  = priceWithVAT($result['price_ht'], $result['vat']) * $quantity;
-                    echo number_format(($total[$id]), 2, ',', ' ') . ' €'; ?></td>
+                <td><?= $product['quantity'] ?></td>
+                <td><?= number_format(($product['totalrow']), 2, ',', ' ') . ' €'; ?>
+                </td>
             </tr>
         <?php endforeach;?>
     <?php endif; debug($total);?>
@@ -38,11 +39,7 @@
     <div class="row justify-content-end">
         <div class="col-2">
 
-            <p> TOTAL <?php $totalCart = 0;
-                foreach ($total as $id => $totalRow):
-                    $totalCart = $totalCart + $totalRow;
-                endforeach;
-                echo number_format(($totalCart), 2, ',', ' ') . ' €'; ?>
+            <p> TOTAL <?=number_format(($result['totalprice']), 2, ',', ' ') . ' €'; ?>
             </p>
             <form action="" method="post">
                 <input class="btn btn-success" type="button" value="Valider le panier" name="submitCart">
@@ -51,3 +48,6 @@
         </div>
     </div>
 </div>
+
+<?php
+require 'ressources/views/layouts/footer.php';
