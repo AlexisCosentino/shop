@@ -8,8 +8,6 @@ if(!empty($_POST)) {
     addProduct($_POST['productId'], $_POST['quantity']);
     $quantityTotalCart = quantitytotalCart(); //Le nombre total de produits dans le panier
     $priceTotalProduct = priceTotalProduct($mydb, $_POST['productId'], $_POST['quantity']); //Prix total par produit dans le panier
-    var_dump($quantityTotalCart);
-    var_dump($priceTotalProduct);
 }
 
 require 'ressources/views/cart/cart.php';

@@ -54,7 +54,12 @@
 
                 </nav>
 
-                <a type="button" class="btn btn-outline-dark" href="index.php?action=cart">Panier 1 produit XXX€ <br> Voir le panier</a>
+                <a type="button" class="btn btn-outline-dark" href="index.php?action=cart">Panier 1 produit <?php $totalCart = 0;
+                    foreach ($total as $id => $totalRow):
+                        $totalCart = $totalCart + $totalRow;
+                    endforeach;
+                    echo number_format(($totalCart), 2, ',', ' ') . ' €'; ?>
+                    <br> Voir le panier</a>
 
             </div>
         </div>
