@@ -38,7 +38,7 @@ function getProductCart(PDO $mydb, int $id)
     productById($mydb, $id);
 }
 
-function addProductToCart($id, $quantity)
+function addProductToCart(int $id, int $quantity)
 {
     $_SESSION['cart'][$id] = intval($quantity);
 }
