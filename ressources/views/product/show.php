@@ -29,6 +29,8 @@ require 'ressources/views/layouts/header.php';
                     </select>
 
                     <input id="productId" name="productId" type="hidden" value="<?= $resultproduct['id']?>" >
+                    <input id="addproduct" name="addproduct" type="hidden" >
+
 
                     <input value="Ajouter au panier" type="submit">
                 </form>

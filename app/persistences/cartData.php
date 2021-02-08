@@ -4,31 +4,28 @@
 function initCart()
 {
     if (!isset($_SESSION['cart'])) {
-        $_SESSION['cart'] = array();
+        $_SESSION['cart'] = [];
     }
 }
 
 function getTotalCart($mydb)
 {
-    if (!empty($_SESSION)) {
-        $totalPrice = 0;
-        $qtTotal = 0;
-        foreach ($_SESSION['cart'] as $id => $quantity) {
+    $result['qttotal'] = 0;
+    $result['totalprice'] = 0;
 
-            $product = productById($mydb, $id);
-            $productPrice = priceWithVAT($product['price_ht'], $product['vat']);
-            $totalRow = $productPrice * $quantity;
-            $totalPrice += $totalRow;
-            $qtTotal += $quantity;
-            $result['id'][$id] = ['product' => $product,
-                'productprice' => $productPrice,
-                'totalrow' => $totalRow,
-                'quantity' => $quantity
-            ];
-        }
-        $result['qttotal'] = $qtTotal;
-        $result['totalprice'] = $totalPrice;
+    foreach ($_SESSION['cart'] as $id => $quantity) {
+        $product = productById($mydb, $id);
+        $productPrice = priceWithVAT($product['price_ht'], $product['vat']);
+        $totalRow = $productPrice * $quantity;
+        $result['totalprice'] += $totalRow;
+        $result['qttotal'] += $quantity;
+        $result['id'][$id] = ['product' => $product,
+            'productprice' => $productPrice,
+            'totalrow' => $totalRow,
+            'quantity' => $quantity
+        ];
     }
+
     return $result;
 }
 
