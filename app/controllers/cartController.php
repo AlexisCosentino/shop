@@ -16,14 +16,21 @@ if (isset($_POST['addproduct'])) {
     }
 
     header('location: index.php?action=cart');
+   exit();
+
+    $_CART = getTotalCart($mydb);
+
+} elseif (isset($_POST['editQuantity'])) {
+    $editQuantity = filter_input(INPUT_POST, 'editQuantity');
+    $id = filter_input(INPUT_POST, 'id');
+    $_SESSION['cart'][$id] = $editQuantity;
+
+    header('location: index.php?action=cart');
     exit();
 
-    $_CART = getTotalCart($mydb);
-} elseif (isset($_POST['editQuantity'])) {
-
-    $_CART = getTotalCart($mydb);
-} elseif (isset ($_GET['deleteProductFromCart'])) {
-
+//    $_CART = getTotalCart($mydb);
+} elseif (isset ($_GET['delete'])) {
+unset($_SESSION['cart'][$_GET['id']]);
 
     $_CART = getTotalCart($mydb);
 }
