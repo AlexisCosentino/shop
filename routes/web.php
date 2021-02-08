@@ -1,7 +1,7 @@
 <?php
 
-
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
+
 $routes = [
     'index' => 'app/controllers/homeController.php',
     'error' => 'ressources/views/errors/error.php',
@@ -21,6 +21,3 @@ if (isset($action)) {
 } else {
     require $routes['index'];
 }
-
-
-

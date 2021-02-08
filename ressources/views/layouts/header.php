@@ -53,11 +53,9 @@
                     </div>
 
                 </nav>
-                <?php if (!empty($_SESSION['cart'])): ?>
-                <a type="button" class="btn btn-outline-dark" href="index.php?action=cart">Panier <?php $result= getTotalCart($mydb); echo $result['qttotal']?> produits <?= number_format(($result['totalprice']), 2, ',', ' ') . ' €'; ?>
+                <a type="button" class="btn btn-outline-dark" href="index.php?action=cart">Panier <?php  echo $_CART['qttotal']?> produits <?= number_format(($_CART['totalprice']), 2, ',', ' ') . ' €'; ?>
 
                     <br> Voir le panier</a>
-                <?php endif; ?>
 
             </div>
         </div>

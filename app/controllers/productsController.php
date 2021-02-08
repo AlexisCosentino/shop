@@ -1,5 +1,4 @@
 <?php
-require 'app/persistences/shopData.php';
 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
@@ -12,4 +11,5 @@ $priceTtc = priceWithVAT($resultproduct['price_ht'], $resultproduct['vat']);
 if ($resultproduct == false) {
     echo "L'article n'existe pas";
 }
+
 require 'ressources/views/product/show.php';
